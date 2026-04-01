@@ -23,6 +23,14 @@ h6 {
     size: 16px;
 }
 
+th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 6px, outset, var(--highlight-color);
+}
+
 
 .button {
     background-color: var(--highlight-color);
@@ -40,4 +48,21 @@ h6 {
 
 .button:hover {
     background-color: var(--darker-highlight-color);
+}
+
+
+#scoreboard {
+    position: fixed;
+    right: 5%;
+}
+
+#score-table {
+    font-size: 20px;
+    border: 6px, inset, var(--darker-highlight-color);
+}
+
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
