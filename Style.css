@@ -9,6 +9,7 @@
 body {
     background-color: var(--bg-color);
     font-family: Arial, sans-serif;
+    cursor: url("media/BoneKnife.cur")
 }
 
 h1 {
@@ -42,12 +43,12 @@ th, td {
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    cursor: crosshair;
 
 }
 
-.button:hover {
+button:hover {
     background-color: var(--darker-highlight-color);
+    cursor: url("media/SkeletonHand.cur");
 }
 
 
