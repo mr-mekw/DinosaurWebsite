@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <title>Dinosaur Game Final</title>
     <meta charset="UTF-8">
-    <meta name="description" content="Final project for Dinosaur Evolution and Extinction @ CCC">
+    <title>Easc 135 Spring 26, Murray Final Project</title>
+    <meta name="description" content="Myth busting commonly mistaken dinosaurs for Dinosaur Evolution and Extinction @ Columbia College Chicago">
     <meta name="author" content="Colton Murray">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
     <link rel="icon" href="media/Apatosaurus-Green.ico">
 </head>
 <body>
-    <h1>Dino or DiNot?</h1>
-    <h6>Game by Colton Murray</h6>
-
-
-    <button class="button" id="start-button"  onclick="startFunction()">Start Game</button>
-    <button class="button" id="credit-button"  onclick="creditFunction()">Credits</button>
-
-    <div id="game-container" > <!-- style="display:none;" -->
-        <p id="question"></p>
-        <br> <br>
-        <button id="dino-button">Dino</button>
-        <br>
-        <button id="dinot-button">DiNot</button>
-        <p id="score"></p>
+    <div>
+        <h1>Dino or DiNot?</h1>
+        <h6>Game by Colton Murray</h6>
     </div>
-
-    <div id="credit-panel" style="display: flex;">
-        <p>TESTING</p>
-        <li>
-            <a href="https://www.rw-designer.com/cursor-set/bones">cursors</a>
-        </li>
-    </div>
+    
 
     <div id="scoreboard" >
         <!-- Make a table with the current scoreboard -->
@@ -70,6 +53,18 @@
          </table>
     </div>
 
+    <details id="center">
+        <summary>Credits:</summary>
+        <a href="https://www.rw-designer.com/cursor-set/bones">cursors</a>
+    </details>
+
+    
+
+    <div id="left-footer">
+        <a href="game.html"> <button class="button">Start Game</button> </a>
+        <a href="essay.html"> <button class="button">Essay</button> </a>
+    </div>
+    
     <script src="Script.js"></script>
 </body>
 </html>
