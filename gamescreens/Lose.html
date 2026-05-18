@@ -7,7 +7,23 @@
     <meta name="author" content="Colton Murray">
     <meta name="viewport" content="width=800, height=600">
     <link rel="stylesheet" href="Style.css">
+
+    <audio id="tromboneWomp">
+        <source src="/media/trombone-womps.mp3">
+    </audio>
+
+    <script>
+        var womp = document.getElementById("tromboneWomp");
+
+        function sad() {
+            womp.play();
+        }
+    </script>
 </head>
-<body>
+<body onload="sad()">
+    
+
     <h1>You lost :<</h1>
+
+    
 </body>

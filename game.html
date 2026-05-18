@@ -10,9 +10,12 @@
     <link rel="icon" href="media/Apatosaurus-Green.ico">
 </head>
 <body>
+    
+
     <h1>Dino or DiNot?</h1>
     <div id="wrapper">
         <h2>Game Window</h2>
+        <p id="score">Score: 0</p>
         <iframe id="gamePort" width="1000" height="750" src="gamescreens/TRex.html"></iframe> <!-- not working, fsr the file isn't recognized -->
         <br />
         <span title="good luck!!">hope you enjoy :D</span>
@@ -27,7 +30,6 @@
         </div>
 
     </div>
-
     
 
     <div id="left-footer">
@@ -49,16 +51,11 @@
 
         var points = 0;
         var currentDino = "TRex";
+        
 
 
         // function that checks which html you're on & go to the next one - to be used by the click commands
 
-        function NextDino() {
-            // 2d array that holds each html & assigns it to an int (NEED TO MAKE OUTSIDE OF THIS FUNCTION)
-           // make a variable that tracks current #  (ALSO OUTSIDE OF FUNCTION)
-
-            // add 
-        }
 
         document.getElementById("Dino_button").addEventListener('click', function() {
             // if (current html's dino bool == true){
@@ -69,6 +66,8 @@
 
             if (currentDino == "TRex") {
                 document.getElementById("gamePort").src="gamescreens/Win.html";
+                points++;
+                document.getElementById("score").textContent = "Score: " + points;
             } else {
                 document.getElementById("gamePort").src="gamescreens/Lose.html";
             }
@@ -80,8 +79,10 @@
             // } else {
             //     change iframe src -> win.html
             // }
-            if (currentDino == "Pterosaur") {
+            if (currentDino == "Pterosaur" || currentDino == "Mososaur") {
                 document.getElementById("gamePort").src="gamescreens/Win.html";
+                points++;
+                document.getElementById("score").textContent = "Score: " + points;
             } else {
                 document.getElementById("gamePort").src="gamescreens/Lose.html";
             }
@@ -92,10 +93,11 @@
                 document.getElementById("gamePort").src="gamescreens/Pterosaur.html";
                 currentDino = "Pterosaur";
             } else if (currentDino == "Pterosaur") {
-                document.getElementById("gamePort").src="gamescreens/TRex.html";
-                currentDino = "TRex";
+                document.getElementById("gamePort").src="gamescreens/Mososaur.html";
+                currentDino = "Mososaur";
             } else {
-                document.getElementById("gamePort").src="gamescreens/Lose.html";
+                document.getElementById("gamePort").src="gamescreens/TRex.html";
+                currentDino = "TRex"
             }
         });
 

@@ -10,6 +10,11 @@
     <style>
         body{
             background-color: darkseagreen;
+
+            display: flex;
+            flex-direction: column; /* stack items vertically */
+            justify-content: center; /* horizontal */
+            align-items: center; /* vertical */
         }
 
         th{
@@ -22,6 +27,10 @@
             justify-content: center; /* horizontal */
             align-items: center; /* vertical */
         }
+
+        span {
+            font-size: small;
+        }
         
     </style>
 </head>
@@ -33,23 +42,28 @@
      *  lil map w/ highlighted location
      -->
 
-     <table>
-        <caption>Dino Info:</caption>
-        <tr>
-            <th>Scientific Name</th>
-            <th>Location</th>
-            <th>Diet</th>
-            <th>Time Period</th>
-        </tr>
-        <tr>
-            <th><i>Tyrannosaurus Rex</i></th>
-            <th>location?</th>
-            <th>Carnivore? I think?</th>
-            <th>mesozoic :]</th>
-        </tr>
-     </table>
+     <span title="https://www.amnh.org/dinosaurs/tyrannosaurus-rex">
+        <table>
+            <caption>Dino Info:</caption>
+            <tr>
+                <th>Common Name</th>
+                <th>Location</th>
+                <th>Diet</th>
+                <th>Time Period</th>
+            </tr>
+            <tr>
+                <th>T. Rex</th>
+                <th>modern day Western North America</th>
+                <th>Carnivore</th>
+                <th>Late Cretaceous (90-66 MYA)</th>
+            </tr>
+        </table>
+    </span>
 
-     <img />
+     <br />
+     <br />
+
+     <span title="Sue at the Field Museum"> <a href="https://www.fieldmuseum.org/blog/how-well-do-you-know-sue"> <img src="https://www.datocms-assets.com/44232/1634586805-01sue.jpg" width="600"/> </a> </span>
 
      <p>TEST TEXT</p>
 </body>
