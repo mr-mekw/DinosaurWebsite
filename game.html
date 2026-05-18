@@ -12,11 +12,92 @@
 <body>
     <h1>Dino or DiNot?</h1>
     <div id="wrapper">
-        <h2>here's ya game ya silly goof</h2>
-        <span title="make sure to use the hint button if you get stuck!">hope you enjoy :D</span>
+        <h2>Game Window</h2>
+        <iframe id="gamePort" width="1000" height="750" src="gamescreens/TRex.html"></iframe> <!-- not working, fsr the file isn't recognized -->
+        <br />
+        <span title="good luck!!">hope you enjoy :D</span>
+
+
+        <div id="buttons">
+            <button class="button" id="Dino_button" onclick="DinoClick()">Dino</button>
+            <button class="button" id="Dinot_button" onclick="DinotClick()">Dinot</button>
+            <br />
+            <!--<button class="button" id="help">Help</button>-->
+            <button class="button" id="next" onclick="ResetClick()">Next Dino</button>
+        </div>
+
     </div>
+
+    
 
     <div id="left-footer">
         <a href="Index.html"> <button class="button">Back Home</button> </a>
     </div>
+
+    <!-- ~> / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / <~
+            JAVASCRIPT BELOW
+    ~> / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / ∧ \ ∨ / <~ -->
+
+    <script>
+        // because I'm expecting to do this the same way I did the game jam
+
+        // set up classes for each specimen & add dino boolean
+        // create a function that checks the boolean against which button is pressed & returns win if they match & lose if they don't
+        // create a function that expands/changes visibility of a text box that holds help info
+        // create a function that randomly chooses a different gamescreen html to show when replay button is pressed
+
+
+        var points = 0;
+        var currentDino = "TRex";
+
+
+        // function that checks which html you're on & go to the next one - to be used by the click commands
+
+        function NextDino() {
+            // 2d array that holds each html & assigns it to an int (NEED TO MAKE OUTSIDE OF THIS FUNCTION)
+           // make a variable that tracks current #  (ALSO OUTSIDE OF FUNCTION)
+
+            // add 
+        }
+
+        document.getElementById("Dino_button").addEventListener('click', function() {
+            // if (current html's dino bool == true){
+            //     change iframe src -> win.html
+            // } else {
+            //     change ifram src -> lose.html
+            // }
+
+            if (currentDino == "TRex") {
+                document.getElementById("gamePort").src="gamescreens/Win.html";
+            } else {
+                document.getElementById("gamePort").src="gamescreens/Lose.html";
+            }
+        });
+
+        document.getElementById("Dinot_button").addEventListener('click', function() {
+            // if (current html's dino bool == false) {
+            //     change iframe src -> lose.hmtml
+            // } else {
+            //     change iframe src -> win.html
+            // }
+            if (currentDino == "Pterosaur") {
+                document.getElementById("gamePort").src="gamescreens/Win.html";
+            } else {
+                document.getElementById("gamePort").src="gamescreens/Lose.html";
+            }
+        });
+
+        document.getElementById("next").addEventListener('click', function() {
+            if (currentDino == "TRex") {
+                document.getElementById("gamePort").src="gamescreens/Pterosaur.html";
+                currentDino = "Pterosaur";
+            } else if (currentDino == "Pterosaur") {
+                document.getElementById("gamePort").src="gamescreens/TRex.html";
+                currentDino = "TRex";
+            } else {
+                document.getElementById("gamePort").src="gamescreens/Lose.html";
+            }
+        });
+
+    </script>
 </body>
